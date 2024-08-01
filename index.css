@@ -1,9 +1,12 @@
+* {
+    margin: 0;
+}
 body {
     font-family: Arial, sans-serif;
 }
 
 nav {
-    background-color: #333;
+    background-color: #270e43;
 }
 
 .menu {
@@ -34,17 +37,18 @@ nav {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: white;
+    background-color: black;
     list-style-type: none;
     margin: 0;
     padding: 0;
     min-width: 200px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .submenu > li > a {
     padding: 12px 16px;
-    color: black;
+    color: white;
     text-decoration: none;
     display: block;
 }
@@ -55,4 +59,86 @@ nav {
 
 .menu > li:hover .submenu {
     display: block;
+}
+
+.name {
+    height:50px;
+    background-color: rgb(18, 104, 75);
+    color: white;
+    font-weight: bold;
+}
+
+.name > marquee {
+    padding-top: 2px;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: xx-large;
+}
+
+marquee:hover {
+    background-color: rgb(7, 36, 7);
+    color: darkgray;
+}
+
+.carousel-inner{
+    height:30rem;
+    width:100vw;
+    
+    display: flex;
+    
+    }
+    
+.carousel-inner img{
+    width:100vw;
+    height: 30rem;
+        
+}
+
+.content {
+    height: 80%;
+}
+
+.footer {
+    background-color: #111;
+    color: #ddd;
+    height: 20rem;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    padding:1.2rem;
+    margin-left: 3.5rem;;
+}
+
+.footer > h3 {
+    text-align: center;
+    padding-top: 20px;
+    margin-left:2rem;
+    margin-right:2rem;
+}
+.form:hover{
+    background-color:rgb(135, 165, 89);
+}
+
+
+hr{
+    color:white;
+}
+.social-media{
+    background-color:cadetblue;
+    height:2rem;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    padding:0.2rem;
+  
+   
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
