@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-waste Calculator</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Enter the number of E-waste you have -></h2>
+        <label for="portable_device"><b>Portable Electronic Devices:</b></label>
+        <input type="number" id="phones" name="portable_device" min="0" placeholder="Enter quantity">
+    
+        <label for="desktops"><b>Desktops:</b></label>
+        <input type="number" id="desktops" name="desktops" min="0" placeholder="Enter quantity">
+
+        <label for="hard_copy_devices"><b>Hard Copy Devices</b></label>
+        <input type="number" id="hard_copy_devices" name="hard_copy_devices" min="0" placeholder="Enter quantity">
+    
+        <label for="electronic_peripheral"><b>Electronic Peripherals:</b></label>
+        <input type="number" id="electronic_peripheral" name="electronic_peripheral" min="0" placeholder="Enter quantity">
+
+        <label for="flat-panel"><b>Flat-panel Displays:</b></label>
+        <input type="number" id="flat-panel" name="flat-panel" min="0" placeholder="Enter quantity">
+
+        <label for="others"><b>Other Devices:</b></label>
+        <input type="number" id="others" name="others" min="0" placeholder="Enter quantity">
+    
+        <button onclick="calculateTotal()">Calculate</button>
+    
+        <div class="result" id="result"></div>
+    </div>
+    
+    <script>
+    function calculateTotal() {
+        const phones = parseInt(document.getElementById('phones').value) || 0;
+        const desktops = parseInt(document.getElementById('desktops').value) || 0;
+        const hard_copy_devices = parseInt(document.getElementById('hard_copy_devices').value) || 0;
+        const flat_panel = parseInt(document.getElementById('flat-panel').value) || 0;
+        const electronic_peripheral = parseInt(document.getElementById('electronic_peripheral').value) || 0;
+        const others = parseInt(document.getElementById('others').value) || 0;
+    
+        const total = phones*(29.83) + desktops*(20.86) + hard_copy_devices*(7.65) + flat_panel*(24.19)+ electronic_peripheral*(10.32)  + others*(1.06);
+    
+        document.getElementById('result').innerText = `More than ${total} MTCO2E CO2 emissions that can be avoided by recycling various electronic devices instead of disposing of them through landfilling or combustion.`;
+    }
+    </script>
+   
+</body>
+</html>
